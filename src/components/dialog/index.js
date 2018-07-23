@@ -138,6 +138,16 @@ export default class CustomDialog extends Component {
 							<div>
 								<div class={style.subtitle}>{data.startTime} - {data.endTime}, {data.location}</div>
 								<p class={style.dialog_body_description}>{data.description}</p>
+								{data.slides &&
+									<a class={style.slides} href={data.slides} target="_blank" rel="noopener noreferrer">
+										<svg viewBox="0 0 24 24">
+											<g>
+												<path d="M19,16H5V8H19M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3Z" />
+											</g>
+										</svg>
+										<span>View Presentation Slides</span>
+									</a>
+								}
 								<div class={style.schedule_event_topics}>
 									{data.topics &&
 										data.topics.map(item => (

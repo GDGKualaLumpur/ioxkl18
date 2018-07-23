@@ -17,7 +17,7 @@ export default class Schedule extends Component {
 	}
 
 	toggleDialog = (id, item) => e => {
-		if (e.target.id !== 'star') {
+		if (e.target.id !== 'star' && e.target.id !== 'slides') {
 			route(this.props.rootPath + 'schedule/' + id);
 			this.dialog.toggle(id, item, 'schedule');
 		}
@@ -152,6 +152,16 @@ export default class Schedule extends Component {
 															}
 														</div>
 													</div>
+													{sessions[item].slides &&
+														<a class={style.slides} id="slides" target="_blank" rel="noopener noreferrer" href={sessions[item].slides}>
+															<svg id="slides" viewBox="0 0 24 24">
+																<g id="slides">
+																	<path id="slides" d="M19,16H5V8H19M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3Z" />
+																</g>
+															</svg>
+															<span id="slides">View Slides</span>
+														</a>
+													}
 												</div>
 												{user &&
 													<div class={style.star_button} onClick={this.star(item)} id="star">

@@ -4,7 +4,7 @@
 }
 
 .tabs .tab {
-    color: #4A4A4A; 
+    color: #4A4A4A;
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
@@ -166,6 +166,28 @@
     flex-direction: row;
 }
 
+.slides {
+    display: flex;
+    margin: 8px 0 0 0;
+    align-items: center;
+    text-decoration: none;
+    color: #4768FD;
+    font-size: 14px;
+}
+
+.slides svg {
+    width: 16px;
+    height: 16px;
+    margin-left: -2px;
+    margin-right: 4px;
+    fill: #4768FD;
+}
+
+.slides span {
+    line-height: 19px;
+    font-weight: 500;
+}
+
 @media screen and (max-width: 1100px) {
     .schedule_events {
         flex-direction: column;
@@ -180,8 +202,7 @@
     .schedule_event_details {
         display: block;
     }
-    .schedule_event:only-child .schedule_event_meta,
-    .schedule_event_meta {
+    .schedule_event:only-child .schedule_event_meta, .schedule_event_meta {
         flex-direction: column;
         align-items: flex-start;
     }
@@ -189,7 +210,7 @@
         margin-bottom: 0;
     }
     .schedule_event_topics {
-        flex-direction: row;    
+        flex-direction: row;
     }
     .star_button {
         position: static;
@@ -253,7 +274,7 @@
         flex: 1;
     }
     .schedule_event {
-        border: none;   
+        border: none;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
@@ -275,7 +296,7 @@
     }
     .star_button {
         padding: 8px 12px;
-        margin-right: 0; 
+        margin-right: 0;
     }
     .star_button:hover .star {
         fill: #4768FD;

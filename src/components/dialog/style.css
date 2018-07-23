@@ -139,6 +139,28 @@
   display: flex;
 }
 
+.dialog_body .slides {
+  display: flex;
+  margin: 24px 0 36px 0;
+  align-items: center;
+  text-decoration: none;
+  color: #4768FD;
+ }
+
+.dialog_body .slides svg {
+  width: 18px;
+  height: 18px;
+  margin-left: -2px;
+  margin-right: 6px;
+  fill: #4768FD;
+}
+
+.dialog_body .slides span {
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: 500;
+ }
+
 .header_speaker_profile {
   width: 120px;
   height: 120px;
